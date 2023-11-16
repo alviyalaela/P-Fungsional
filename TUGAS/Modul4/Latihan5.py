@@ -4,12 +4,14 @@ def point(x, y):
 def line_equation_of(p1, p2):
     x1, y1 = p1
     x2, y2 = p2
-
-    m = (y2 - y1) / (x2 - x1)
     
-    c = y1 - m * x1
+    def calc_gradient():
+        return (y2 - y1) / (x2 - x1)
     
-    return f"y = {m:.2f}x + {c:.2f}"
+    gradient = calc_gradient()
+    c = y1 - gradient * x1
+    
+    return f"y = {gradient:.2f}x + {c:.2f}"
 
 print("Persamaan garis yang melalui titik A dan B:")
-print(line_equation_of(point(1, 4), point(0, 0)))
+print(line_equation_of(point(1, 4), point(0, 9)))

@@ -1,14 +1,14 @@
-def title_decorator(function):
+def title_decorator(text):
     def wrapper():
-        func = function()
+        func = text()
         make_title = func.title()
         print(make_title + " - Data is converted to title case")
         return make_title
     return wrapper
 
-def split_string(function):
+def split_string(text):
     def wrapper():
-        func = function()
+        func = text()
         splitted_string = func.split()
         print(str(splitted_string) + " - Then data is splitted")
         return splitted_string
